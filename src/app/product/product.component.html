@@ -1,0 +1,30 @@
+
+<form [formGroup]="product_form" (ngSubmit)="saveDetails()">
+  
+    <div>
+      <label for="product-name">Product Name:</label>
+      <input type="text" id="product-name" name="product_name" required formControlName="product_name">
+    </div>
+    <div>
+      <label for="product-category">Category:</label>
+      <select id="product-category" name="product_category" formControlName="product_category">
+        <option value="">Select a category</option>
+        <option value="electronics">Electronics</option>
+        <option value="clothing">Clothing</option>
+        <option value="home">Home</option>
+        <option value="beauty">Beauty</option>
+      </select>
+    </div>
+    <div>
+      <label for="product-description">Product Description:</label>
+      <textarea id="product-description" name="product_description" required formControlName="product_description"></textarea>
+    </div>
+    <div>
+      <label for="product-price">Price:</label>
+      <input type="number" id="product-price" name="product_price" required formControlName="product_price">
+    </div>
+    
+    <button type="submit">Submit</button>
+    
+  </form>
+  
