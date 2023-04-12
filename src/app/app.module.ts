@@ -16,6 +16,8 @@ import{MatButtonModule}from '@angular/material/button';
 import{ReactiveFormsModule} from '@angular/forms';
 import { CurrencyConvertorComponent } from './currency-convertor/currency-convertor.component';
 import { FormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,8 @@ import { FormsModule } from '@angular/forms';
     ReactiveFormsModule,
     MatButtonModule,
     FormsModule,
+    NgbModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

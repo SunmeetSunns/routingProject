@@ -12,6 +12,12 @@ export class CurrencyConvertorComponent implements OnInit {
   currency:any={};
   rate:number;
   currentrate:number;
+  optCurrencies1=['USD','EUR','INR','GBP','JPY'];
+  optCurrencies2=[];
+  
+
+
+  
  
   
   constructor(){
@@ -35,37 +41,35 @@ export class CurrencyConvertorComponent implements OnInit {
 
     localStorage.setItem('Currency',JSON.stringify(this.currency));
     localStorage.getItem('Currency');
-  
-   
-    alert("currency: " + JSON.stringify(this.currency));
-    if(this.currency.from=='USD' ){
-      this.currentrate=this.currency.amount*this.currency.rate;
-    }
-    else if(this.currency.from=='EUR'){
-      this.currentrate=this.currency.amount*this.currency.rate;
-    }
-    else if(this.currency.from=='GBP'){
-      this.currentrate=this.currency.amount*this.currency.rate;
-    }
-    else if(this.currency.from=='JPY'){
-      this.currentrate=this.currency.amount*this.currency.rate;
+    if(this.currency.from=='INR'){
+      this.divide();
     }
     else{
-      this.currentrate=this.currency.amount*this.currency.rate;
+      this.multiply();
     }
-    console.log(this.currentrate);
+     
+ 
   }
-  // convertCurrency(amount: number, rate : number,fromCurrency: string, toCurrency: string): number {
-  //   // Set the exchange rate between the two currencies
-  //   const exchangeRate = 1.2; // Example rate: 1 USD = 1.2 EUR
-    
-  //   // Convert the amount to the destination currency
-  //   const convertedAmount = amount * exchangeRate;
-    
-  //   // Return the converted amount rounded to two decimal places
-  //   return parseFloat(convertedAmount.toFixed(2));
-  // }
-  
+  onCurrencyChange(event:any){
+    debugger
+    let option=event.target.value;
+    switch(option){
+      case 'INR':
+        this.optCurrencies2=['USD','EUR','GBP','JPY'];
+        break;
+      default:
+        this.optCurrencies2=['INR'];
+        break;
+    }
+  }
+  divide(){
+    this.currentrate=this.currency.amount/this.currency.rate;
+   
+  }
+  multiply(){
+    this.currentrate=this.currency.amount*this.currency.rate;
+  }
+ 
 
 
 }

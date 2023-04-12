@@ -2,6 +2,7 @@
 	<title>Currency Converter</title>
 	<style>
 		body {
+			
 			font-family: Arial, sans-serif;
 			background-color: white;
 			padding: 20px;
@@ -12,12 +13,15 @@
 			margin-top: 0;
 		}
 		form {
-			background-color: #f2f2f2;
+			
+			background-color: #8494ed;
 			padding: 20px;
 			border-radius: 10px;
-			box-shadow: 0 0 10px rgba(0,0,0,0.2);
+			box-shadow: 0 0 20px rgba(0,0,0,0.2);
 			max-width: 500px;
 			margin: 0 auto;
+			
+			
 		}
 		label {
 			display: block;
@@ -60,18 +64,23 @@
 		<input type="number" id="rate" name="rate" placeholder="Enter rate" required
 		formControlName="rate">
 		<label for="from">From:</label>
-		<select id="from" name="from" formControlName="from">
-            <option value="INR">INR</option>
+		<select  #box id="from" name="from" formControlName="from" (change)="onCurrencyChange($event)">
+			<option *ngFor="let country of optCurrencies1" [value]="country">{{country}}</option>
+			  
+			  
+			  
+			  
+            <!-- <option value="INR">INR</option>
 			<option value="USD">USD</option>
 			<option value="EUR">EUR</option>
 			<option value="GBP">GBP</option>
-			<option value="JPY">JPY</option>
+			<option value="JPY">JPY</option> -->
 			
 			
 		</select>
 		<label for="to">To:</label>
 		<select id="to" name="to" formControlName="to">
-            <option value="INR">INR</option>
+			<option *ngFor="let country of optCurrencies2" [value]="country">{{country}}</option>
 			<!-- <option value="USD">USD</option>
 			<option value="EUR">EUR</option>
 			<option value="JPY">JPY</option>
@@ -79,7 +88,9 @@
 			
 		</select>
         <br>
-		<button type="submit">Convert</button>
+		<button type="submit">Convert</button><br>
+
+		<span>The Current Currency Rate is : {{currentrate}}</span><br>
 	</form>
 
 
