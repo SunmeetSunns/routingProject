@@ -5,10 +5,13 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class CommonService {
-  url='http://localhost:3000/products'
+  // url='http://localhost:3000/products'
   constructor(private http: HttpClient) { }
-  product(){
-    return this.http.get(this.url);
+  // product(){
+  //   return this.http.get(this.url);
+  // }
+  getproductInfo(url : string){
+    return this.http.get(url);
   }
 
 }

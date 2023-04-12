@@ -9,7 +9,8 @@ import { CommonService } from 'src/services/common.service';
 export class ProductInfoComponent {
   products:any;
   constructor(private productInfo :CommonService){
-    productInfo.product().subscribe((data) =>{
+    const url='http://localhost:3000/products';
+    productInfo.getproductInfo(url).subscribe((data) =>{
       console.warn('product',data);
       
       this.products = data});
