@@ -9,36 +9,17 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>Product 1</td>
-        <td>Description of Product 1</td>
-        <td>Category 1</td>
-        <td>Rs. 999</td>
+      <tr *ngFor="let product of products">
+        <td>{{ product.name }}</td>
+        <td>{{ product.desc }}</td>
+        <td>{{ product.category}}</td>
+        <td>{{ product.price }}</td>
+       
         <td>
           <button class="delete-btn">Delete</button>
           <button class="update-btn">Update</button>
         </td>
-      </tr>
-      <tr>
-        <td>Product 2</td>
-        <td>Description of Product 2</td>
-        <td>Category 2</td>
-        <td>Rs. 599</td>
-        <td>
-          <button class="delete-btn">Delete</button>
-          <button class="update-btn">Update</button>
-        </td>
-      </tr>
-      <tr>
-        <td>Product 3</td>
-        <td>Description of Product 3</td>
-        <td>Category 1</td>
-        <td>Rs. 599</td>
-        <td>
-          <button class="delete-btn">Delete</button>
-          <button class="update-btn">Update</button>
-        </td>
-      </tr>
+     
     </tbody>
   </table>
   
