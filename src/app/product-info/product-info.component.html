@@ -1,25 +1,29 @@
-<table>
+<div class="container my-5">
+  <table class="table table-dark table-hover">
     <thead>
       <tr>
-        <th>Product Name</th>
-        <th>Description</th>
-        <th>Category</th>
-        <th>Price</th>
-        <th>Actions</th>
+        <th scope="col">ID</th>
+        <th scope="col">Product Name</th>
+        <th scope="col">Description</th>
+        <th scope="col">Price</th>
+        <th scope="col">Category</th>
+        <th scope="col">Action</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let product of products">
+        <th scope="row">1</th>
         <td>{{ product.name }}</td>
         <td>{{ product.desc }}</td>
+        <td>₹ {{ product.price }}</td>
         <td>{{ product.category}}</td>
-        <td>{{ product.price }}</td>
-       
         <td>
-          <button class="delete-btn">Delete</button>
-          <button class="update-btn">Update</button>
+          <div class="d-flex">
+            <button type="button" class="btn btn-primary">Edit</button>
+            <button type="button" class="btn btn-danger mx-2">Delete</button>
+          </div>
         </td>
-     
+      </tr>
     </tbody>
   </table>
-  
+</div>
