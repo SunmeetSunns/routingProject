@@ -18,6 +18,7 @@ import { CurrencyConvertorComponent } from './currency-convertor/currency-conver
 import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
+import { ProductInfoComponent } from './product-info/product-info.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { HttpClientModule } from '@angular/common/http';
     NoPageComponent,
     ProductComponent,
     CurrencyConvertorComponent,
+    ProductInfoComponent,
     
   ],
   imports: [

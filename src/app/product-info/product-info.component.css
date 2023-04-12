@@ -1,0 +1,53 @@
+table {
+    border-collapse: collapse;
+    width: 90%;
+    margin-left: 55px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    align-items: center;
+  }
+  
+  th {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+  }
+  td {
+    border: 1px dashed black;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  th {
+    background-color: #ddd;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .delete-btn, .update-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+  
+  .delete-btn:hover, .update-btn:hover {
+    background-color: #3e8e41;
+  }
+  
+  .delete-btn {
+    background-color: #f44336;
+  }
+  
+  .delete-btn:hover {
+    background-color: #c62828;
+  }
+  
