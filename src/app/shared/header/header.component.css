@@ -1,14 +1,12 @@
+div{
+  padding: 15px 25px;
+  background: rgb(17 24 39);
+}
 nav {
-    /* position: fixed; */
-    
-    top: 0%;
-    width: 98%;
-    height: 50px;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    background:linear-gradient(rgb(80, 58, 179),#050b4d);
-    padding: 10px;
+    justify-content: space-between;
   }
   
   .left-nav {
@@ -19,7 +17,7 @@ nav {
   }
   
   .left-nav li {
-    margin-right: 20px;
+    margin-right: 25px;
   }
   
   .left-nav li:last-child {
@@ -27,14 +25,17 @@ nav {
   }
   
   .left-nav li a {
-    text-decoration: none;
     color: white;
-    font-weight: bold;
-    font-size: 1.5em;
-    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+    word-spacing: 1px;
+    text-align: center;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
   }
   .left-nav li a:hover {
-    color: rgb(209, 209, 10);
+    opacity: 0.8;
   }
   
   .right-nav {
@@ -45,7 +46,7 @@ nav {
   }
   
   .right-nav li {
-    margin-left: 20px;
+    margin-left: 25px;
   }
   
   .right-nav li:first-child {
@@ -53,12 +54,16 @@ nav {
   }
   
   .right-nav li a {
-    text-decoration: none;
     color: white;
-    font-weight: bold;
-    font-size: 1.5em;
+    font-size: 14px;
+    font-weight: 700;
+    word-spacing: 1px;
+    text-align: center;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
   }
   
   .right-nav li a:hover {
-    color: rgb(209, 209, 10);
+    opacity: 0.8;
   }
