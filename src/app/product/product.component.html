@@ -1,13 +1,13 @@
 
-<form [formGroup]="product_form" (ngSubmit)="saveDetails()">
+<form [formGroup]="product_form" (ngSubmit)="saveForm()">
   
     <div>
       <label for="product-name">Product Name:</label>
-      <input type="text" id="product-name" name="product_name" required formControlName="product_name">
+      <input type="text" id="product-name" name="name" required formControlName="name">
     </div>
     <div>
       <label for="product-category">Category:</label>
-      <select id="product-category" name="product_category" formControlName="product_category">
+      <select id="product-category" name="category" formControlName="category">
         <option value="">Select a category</option>
         <option value="electronics">Electronics</option>
         <option value="clothing">Clothing</option>
@@ -17,11 +17,11 @@
     </div>
     <div>
       <label for="product-description">Product Description:</label>
-      <textarea id="product-description" name="product_description" required formControlName="product_description"></textarea>
+      <textarea id="product-description" name="desc" required formControlName="desc"></textarea>
     </div>
     <div>
       <label for="product-price">Price:</label>
-      <input type="number" id="product-price" name="product_price" required formControlName="product_price">
+      <input type="number" id="product-price" name="price" required formControlName="price">
     </div>
     
     <button type="submit">Submit</button>

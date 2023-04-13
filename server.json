@@ -1,109 +1,117 @@
 {
-    "products": [
-        {
-            "id": 1,
-            "name": "Apple AirPods",
-            "category": "Electronics",
-            "desc": "Wireless earbuds with up to 5 hours of listening time and 24-hour battery life with charging case.",
-            "price": 159
-        },
-        {
-            "id": 2,
-            "name": "Instant Pot Duo Mini",
-            "category": "Home",
-            "desc": "7-in-1 programmable pressure cooker, slow cooker, rice cooker, steamer, sauté, yogurt maker, and warmer.",
-            "price": 69.99
-        },
-        {
-            "id": 3,
-            "name": "Levi's 501 Original Fit Jeans",
-            "category": "Clothing",
-            "desc": "Classic straight-leg jeans with button fly and 5-pocket styling.",
-            "price": 59.5
-        },
-        {
-            "id": 4,
-            "name": "Maybelline Great Lash Mascara",
-            "category": "Beauty",
-            "desc": "Iconic mascara that conditions as it thickens, with a lash-doubling formula and brush.",
-            "price": 6.99
-        },
-        {
-            "id": 5,
-            "name": "Fitbit Inspire 2",
-            "category": "Electronics",
-            "desc": "Fitness tracker with 24/7 heart rate tracking, sleep monitoring, and up to 10 days of battery life.",
-            "price": 99.95
-        },
-        {
-            "id": 6,
-            "name": "AmazonBasics Lightweight Microfiber Duvet Cover Set",
-            "category": "Home",
-            "desc": "Soft and wrinkle-resistant microfiber duvet cover set with hidden button closure and pillow shams.",
-            "price": 24.99
-        },
-        {
-            "id": 7,
-            "name": "Calvin Klein Men's Cotton Classics Boxer Briefs",
-            "category": "Clothing",
-            "desc": "Soft and breathable cotton boxer briefs with logo waistband.",
-            "price": 29.5
-        },
-        {
-            "id": 8,
-            "name": "Burt's Bees Beeswax Lip Balm",
-            "category": "Beauty",
-            "desc": "100% natural lip balm with beeswax and vitamin E to moisturize and nourish lips.",
-            "price": 2.99
-        },
-        {
-            "id": 9,
-            "name": "Samsung Galaxy Watch Active2",
-            "category": "Electronics",
-            "desc": "Smartwatch with built-in GPS, heart rate monitoring, and customizable watch faces.",
-            "price": 249.99
-        },
-        {
-            "id": 10,
-            "name": "AmazonBasics Memory Foam Dog Bed",
-            "category": "Home",
-            "desc": "Rectangular dog bed with memory foam for support and comfort, with removable and machine-washable cover.",
-            "price": 34.99
-        },
-        {
-            "id": 11,
-            "name": "Champion Men's Powerblend Fleece Pullover Hoodie",
-            "category": "Clothing",
-            "desc": "Soft and comfortable fleece hoodie with front pouch pocket and logo embroidery.",
-            "price": 45
-        },
-        {
-            "id": 12,
-            "name": "Cetaphil Gentle Skin Cleanser",
-            "category": "Beauty",
-            "desc": "Mild and non-irritating cleanser for sensitive skin, with a soap-free formula that gently cleanses and soothes.",
-            "price": 14.99
-        },
-        {
-            "id": 13,
-            "name": "Anker PowerCore 10000 Portable Charger",
-            "category": "Electronics",
-            "desc": "Compact and high-speed portable charger with 10000mAh capacity and PowerIQ technology for fast charging.",
-            "price": 25.99
-        },
-        {
-            "id": 14,
-            "name": "AmazonBasics Lightweight Super Soft Easy Care Microfiber Sheet Set",
-            "category": "Home",
-            "desc": "Soft and durable microfiber sheets that resist wrinkles, with a deep pocket fitted sheet that fits mattresses up to 16 inches.",
-            "price": 19.99
-        },
-        {
-            "id": 15,
-            "name": "Adidas Originals Superstar Sneakers",
-            "category": "Clothing",
-            "desc": "Classic low-top sneakers with rubber shell toe and signature 3-stripes design.",
-            "price": 80
-        }
-    ]
+  "products": [
+    {
+      "id": 1,
+      "name": "Apple AirPods",
+      "category": "Electronics",
+      "desc": "Wireless earbuds with up to 5 hours of listening time and 24-hour battery life with charging case.",
+      "price": 159
+    },
+    {
+      "id": 2,
+      "name": "Instant Pot Duo Mini",
+      "category": "Home",
+      "desc": "7-in-1 programmable pressure cooker, slow cooker, rice cooker, steamer, sauté, yogurt maker, and warmer.",
+      "price": 69.99
+    },
+    {
+      "id": 3,
+      "name": "Levi's 501 Original Fit Jeans",
+      "category": "Clothing",
+      "desc": "Classic straight-leg jeans with button fly and 5-pocket styling.",
+      "price": 59.5
+    },
+    {
+      "id": 4,
+      "name": "Maybelline Great Lash Mascara",
+      "category": "Beauty",
+      "desc": "Iconic mascara that conditions as it thickens, with a lash-doubling formula and brush.",
+      "price": 6.99
+    },
+    {
+      "id": 5,
+      "name": "Fitbit Inspire 2",
+      "category": "Electronics",
+      "desc": "Fitness tracker with 24/7 heart rate tracking, sleep monitoring, and up to 10 days of battery life.",
+      "price": 99.95
+    },
+    {
+      "id": 6,
+      "name": "AmazonBasics Lightweight Microfiber Duvet Cover Set",
+      "category": "Home",
+      "desc": "Soft and wrinkle-resistant microfiber duvet cover set with hidden button closure and pillow shams.",
+      "price": 24.99
+    },
+    {
+      "id": 7,
+      "name": "Calvin Klein Men's Cotton Classics Boxer Briefs",
+      "category": "Clothing",
+      "desc": "Soft and breathable cotton boxer briefs with logo waistband.",
+      "price": 29.5
+    },
+    {
+      "id": 8,
+      "name": "Burt's Bees Beeswax Lip Balm",
+      "category": "Beauty",
+      "desc": "100% natural lip balm with beeswax and vitamin E to moisturize and nourish lips.",
+      "price": 2.99
+    },
+    {
+      "id": 9,
+      "name": "Samsung Galaxy Watch Active2",
+      "category": "Electronics",
+      "desc": "Smartwatch with built-in GPS, heart rate monitoring, and customizable watch faces.",
+      "price": 249.99
+    },
+    {
+      "id": 10,
+      "name": "AmazonBasics Memory Foam Dog Bed",
+      "category": "Home",
+      "desc": "Rectangular dog bed with memory foam for support and comfort, with removable and machine-washable cover.",
+      "price": 34.99
+    },
+    {
+      "id": 11,
+      "name": "Champion Men's Powerblend Fleece Pullover Hoodie",
+      "category": "Clothing",
+      "desc": "Soft and comfortable fleece hoodie with front pouch pocket and logo embroidery.",
+      "price": 45
+    },
+    {
+      "id": 12,
+      "name": "Cetaphil Gentle Skin Cleanser",
+      "category": "Beauty",
+      "desc": "Mild and non-irritating cleanser for sensitive skin, with a soap-free formula that gently cleanses and soothes.",
+      "price": 14.99
+    },
+    {
+      "id": 13,
+      "name": "Anker PowerCore 10000 Portable Charger",
+      "category": "Electronics",
+      "desc": "Compact and high-speed portable charger with 10000mAh capacity and PowerIQ technology for fast charging.",
+      "price": 25.99
+    },
+    {
+      "id": 14,
+      "name": "AmazonBasics Lightweight Super Soft Easy Care Microfiber Sheet Set",
+      "category": "Home",
+      "desc": "Soft and durable microfiber sheets that resist wrinkles, with a deep pocket fitted sheet that fits mattresses up to 16 inches.",
+      "price": 19.99
+    },
+    {
+      "id": 15,
+      "name": "Adidas Originals Superstar Sneakers",
+      "category": "Clothing",
+      "desc": "Classic low-top sneakers with rubber shell toe and signature 3-stripes design.",
+      "price": 80
+    },
+    
+    {
+      "name": "sss",
+      "category": "electronics",
+      "price": 59,
+      "desc": "aDD",
+      "id": 16
+    }
+  ]
 }

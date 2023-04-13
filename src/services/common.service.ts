@@ -13,6 +13,9 @@ export class CommonService {
   getproductInfo(url : string){
     return this.http.get(url);
   }
+  saveProductfo(url:string,data:any){
+    return this.http.post(url, data);
+  }
 
 }
 //  constructor(private http: HttpClient) { }
