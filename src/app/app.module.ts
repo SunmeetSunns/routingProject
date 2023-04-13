@@ -19,6 +19,7 @@ import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductInfoComponent } from './product-info/product-info.component';
+import { UpdateProductComponent } from './update-product/update-product.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { ProductInfoComponent } from './product-info/product-info.component';
     ProductComponent,
     CurrencyConvertorComponent,
     ProductInfoComponent,
+    UpdateProductComponent,
     
   ],
   imports: [

@@ -15,11 +15,11 @@
       "price": 69.99
     },
     {
-      "id": 3,
       "name": "Levi's 501 Original Fit Jeans",
       "category": "Clothing",
       "desc": "Classic straight-leg jeans with button fly and 5-pocket styling.",
-      "price": 59.5
+      "price": 89,
+      "id": 3
     },
     {
       "id": 4,
@@ -104,14 +104,6 @@
       "category": "Clothing",
       "desc": "Classic low-top sneakers with rubber shell toe and signature 3-stripes design.",
       "price": 80
-    },
-    
-    {
-      "name": "sss",
-      "category": "electronics",
-      "price": 59,
-      "desc": "aDD",
-      "id": 16
     }
   ]
 }

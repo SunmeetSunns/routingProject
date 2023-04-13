@@ -16,9 +16,15 @@ export class CommonService {
   saveProductfo(url:string,data:any){
     return this.http.post(url, data);
   }
+  DeleteProductInfo(url:string,id:number){
+    return this.http.delete(url+'/'+id);
+  }
+  GetProductId(url:string,id:string){
+    return this.http.get(url+'/'+id);
+  }
+  UpdateProduct(url:string,id :number,product:any){
+    return this.http.put(url+'/'+id,product);
+
+  }
 
 }
-//  constructor(private http: HttpClient) { }
-//   news(){
-//     return this.http.get(' https://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey=4a280822e4ca4ec692ca888d1b29a232 ');
-//   }
