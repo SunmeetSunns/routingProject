@@ -1,0 +1,21 @@
+<p>table-prime works!</p>
+
+
+<p-table [value]="products" [tableStyle]="{ 'min-width': '50rem' }">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Code</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Quantity</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-product>
+        <tr>
+            <td>{{ product.name }}</td>
+            <td>{{ product.category }}</td>
+            <td>{{ product.desc }}</td>
+            <td>{{ product.price }}</td>
+        </tr>
+    </ng-template>
+</p-table>

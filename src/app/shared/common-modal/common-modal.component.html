@@ -1,0 +1,24 @@
+<div class="modal" [ngClass]="{'d-block': isVisible}">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">The Item is Being Deleted </h5>
+        <button type="button" class="close" aria-label="Close" (click)="closePopup()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="row">
+          <div class="col-12">
+          <button class="btn btn-danger">
+           Delete Item
+
+          </button>
+
+          </div>
+        </div>
+      </div>
+      <div class="modal-body">
+        <p>Are you sure you want to delete the item </p>
+      </div>
+    </div>
+  </div>
+</div>

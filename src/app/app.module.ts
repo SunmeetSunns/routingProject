@@ -20,6 +20,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductInfoComponent } from './product-info/product-info.component';
 import { UpdateProductComponent } from './update-product/update-product.component';
+import { TablePrimeComponent } from './table-prime/table-prime.component';
+import { TableModule } from 'primeng/table';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,8 @@ import { UpdateProductComponent } from './update-product/update-product.componen
     CurrencyConvertorComponent,
     ProductInfoComponent,
     UpdateProductComponent,
+    TablePrimeComponent,
+  
     
   ],
   imports: [
@@ -45,6 +49,8 @@ import { UpdateProductComponent } from './update-product/update-product.componen
     FormsModule,
     NgbModule,
     HttpClientModule,
+    TableModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
