@@ -1,17 +1,15 @@
-<div  *ngIf="showModal"class="container">
-
-  <div class="modal-title" *ngIf="showModal">
-    <h1 >{{title}}</h1>
-
+<div *ngIf="title=='Delete Modal'" class="container">
+  <div class="modal-title">
+    <h1>{{heading}}</h1>
   </div>
-  <hr *ngIf="showModal">
-  <div class="modal-message" *ngIf="showModal">
-    <h6 >{{message}}</h6>
-
+  <hr>
+  <div class="modal-message">
+    <h6>{{message}}</h6>
   </div>
-  <div class="modal-buttons" *ngIf="showModal">
-    <button *ngFor="let button of buttons" (click)="onButtonClicked(button)">
-      {{ button.label }}
-    </button>
+  <div class="modal-buttons">
+    <button class="px-4" (click)="confirm()">Yes, I'm sure</button>
+    <button type="button"
+      class="inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 font-medium text-secondary shadow-sm"
+      (click)="activeModal.close('Close click')">Cancel</button>
   </div>
 </div>

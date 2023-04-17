@@ -10,15 +10,38 @@ import { CommonService } from 'src/services/common.service';
 })
 export class TablePrimeComponent implements OnInit {
   products: any;
-  constructor(private productInfo :CommonService){
+  users: any = [];
+
+  cols: any[];
+  constructor(private commonService :CommonService){
    
   }
   ngOnInit(): void {
-      
+    this.initialiseTableSchema();
+    this.getData();
   }
+
+  initialiseTableSchema() {
+    this.cols = [
+      { field: 'id', header: 'ID' },
+      { field: 'name', header: 'Name' },
+      { field: 'username', header: 'Username' },
+      { field: 'email', header: 'Email' }
+    ];
+  }
+
+  getData() {
+    const url = 'https://jsonplaceholder.typicode.com/users';
+    this.commonService.getproductInfo(url).subscribe((data) => {
+      console.log('users', data);
+      this.users = data;
+    });
+
+  }
+
   UpdatedList(){
     const url='http://localhost:3000/products';
-    this.productInfo.getproductInfo(url).subscribe((data) =>{
+    this.commonService.getproductInfo(url).subscribe((data) =>{
       console.warn('product',data);
       
       this.products = data});

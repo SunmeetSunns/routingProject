@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonService } from 'src/services/common.service';
-import { ModalDismissReasons,NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { PopupServiceService } from 'src/services/popup-service.service';
+import { CommonModalComponent } from '../shared/common-modal/common-modal.component';
 
 @Component({
   selector: 'app-product-info',
@@ -9,7 +10,7 @@ import { PopupServiceService } from 'src/services/popup-service.service';
   styleUrls: ['./product-info.component.css']
 })
 export class ProductInfoComponent implements OnInit {
-  constructor(private productInfo :CommonService,private popupService :PopupServiceService){
+  constructor(private productInfo: CommonService, private popupService: PopupServiceService, private modal: NgbModal,){
 
    
   }
@@ -30,25 +31,37 @@ export class ProductInfoComponent implements OnInit {
       this.products = data});
     
   }
-  DeleteProduct(id:number){
+  // DeleteProduct(id:number){
    
-    this.onOpenModal();
-    if(this.onConfirm()==true){
-      const url='http://localhost:3000/products';
-    this.productInfo.DeleteProductInfo(url,id).subscribe((result) =>{
-      this.productMessage="Product deleted successfully";
-      this.UpdatedList();
+  //   this.onOpenModal();
+  //   if(this.onConfirm()==true){
+  //     const url='http://localhost:3000/products';
+  //   this.productInfo.DeleteProductInfo(url,id).subscribe((result) =>{
+  //     this.productMessage="Product deleted successfully";
+  //     this.UpdatedList();
 
-    })
-    // console.log('delete product',id);
+  //   })
+  //   }
+  //   else{
 
-  
-    }
-    else{
+  //   }
+  // }
 
-    }
+  DeleteProduct(id) {
+    const modalRef = this.modal.open(CommonModalComponent, { size: 'lg', centered: true });
+    modalRef.componentInstance.title = 'Delete Modal';
+    modalRef.componentInstance.heading = 'Delete Product';
+    modalRef.componentInstance.message = 'Are you sure you want to delete this product?';
 
-
+    modalRef.componentInstance.confirmClicked.subscribe((confirmed) => {
+      if (confirmed) {
+        const url = 'http://localhost:3000/products';
+        this.productInfo.DeleteProductInfo(url, id).subscribe((result) => {
+          this.productMessage = "Product deleted successfully";
+          this.UpdatedList();
+        });
+      }
+    });
   }
   
 

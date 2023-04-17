@@ -1,7 +1,5 @@
-import { Component, Type ,OnInit,Input ,Output,EventEmitter } from '@angular/core';
-
-import { PopupServiceService } from 'src/services/popup-service.service';
-
+import { Component ,OnInit,Input ,Output,EventEmitter } from '@angular/core';
+import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-common-modal',
@@ -9,22 +7,18 @@ import { PopupServiceService } from 'src/services/popup-service.service';
   styleUrls: ['./common-modal.component.css']
 })
 export class CommonModalComponent implements OnInit {
-  @Input() title: string;
-  @Input() message: string;
-  @Input() buttons: any[];
+  @Input() title = ``;
+  @Input() heading = ``;
+  @Input() message = ``;
+  @Output() confirmClicked = new EventEmitter<any>();
 
-  showModal = false;
-  constructor(private PopupService: PopupServiceService){}
+  constructor(public activeModal: NgbActiveModal) { }
+  
   ngOnInit(): void {
-    this.PopupService.showModal$.subscribe(show=>this.showModal=show);
-  }
-  onClose() {
-    this.PopupService.closeModal();
   }
 
-  onButtonClicked(button: any) {
-    button.action();
-    this.onClose();
+  confirm() {
+    this.confirmClicked.emit(true);
   }
   
  
