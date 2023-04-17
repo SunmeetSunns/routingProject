@@ -3,6 +3,7 @@ import { CommonService } from 'src/services/common.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { PopupServiceService } from 'src/services/popup-service.service';
 import { CommonModalComponent } from '../shared/common-modal/common-modal.component';
+import { UpdateProductComponent } from '../update-product/update-product.component';
 
 @Component({
   selector: 'app-product-info',
@@ -46,6 +47,7 @@ export class ProductInfoComponent implements OnInit {
 
   //   }
   // }
+  productData: any;
 
   DeleteProduct(id) {
     const modalRef = this.modal.open(CommonModalComponent, { size: 'lg', centered: true });
@@ -59,10 +61,36 @@ export class ProductInfoComponent implements OnInit {
         this.productInfo.DeleteProductInfo(url, id).subscribe((result) => {
           this.productMessage = "Product deleted successfully";
           this.UpdatedList();
+          modalRef.dismiss();
         });
       }
     });
   }
+ EditProduct(id){
+  debugger;
+  const ref=this.modal.open(UpdateProductComponent,{size:'lg',centered:true});
+  ref.componentInstance.title="Update Modal";
+  ref.componentInstance.heading='Update Product';
+  ref.componentInstance.message='Update your product here : ';
+  ref.componentInstance.mainData.subscribe(data =>{
+    const url= 'http://localhost:3000/products';
+    this.productInfo.UpdateProduct(url,id,data).subscribe((result) =>{
+      this.productMessage = "Product updated successfully";
+      this.UpdatedList();
+      ref.dismiss();
+    })
+  })
+  // ref.componentInstance.confirmClicked.subscribe((confirmed) => {
+  //   if (confirmed) {
+  //     const url = 'http://localhost:3000/products';
+  //     this.productInfo.UpdateProduct(url, id).subscribe((result) => {
+  //       this.productMessage = "Product deleted successfully";
+  //       this.UpdatedList();
+  //       ref.dismiss();
+  //     });
+  //   }
+  // });
+ }
   
 
 

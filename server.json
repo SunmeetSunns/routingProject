@@ -1,11 +1,7 @@
 {
   "products": [
     {
-      "id": 1,
-      "name": "Apple AirPods",
-      "category": "Electronics",
-      "desc": "Wireless earbuds with up to 5 hours of listening time and 24-hour battery life with charging case.",
-      "price": 159
+      "id": 1
     },
     {
       "id": 2,
@@ -92,18 +88,7 @@
       "price": 25.99
     },
     {
-      "id": 14,
-      "name": "AmazonBasics Lightweight Super Soft Easy Care Microfiber Sheet Set",
-      "category": "Home",
-      "desc": "Soft and durable microfiber sheets that resist wrinkles, with a deep pocket fitted sheet that fits mattresses up to 16 inches.",
-      "price": 19.99
-    },
-    {
-      "id": 15,
-      "name": "Adidas Originals Superstar Sneakers",
-      "category": "Clothing",
-      "desc": "Classic low-top sneakers with rubber shell toe and signature 3-stripes design.",
-      "price": 80
+      "id": 14
     }
   ]
 }

@@ -1,6 +1,7 @@
-import { Component , OnInit } from '@angular/core';
+import { Component , OnInit,Input, Output, EventEmitter } from '@angular/core';
 import { FormGroup,FormControl } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
+import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { CommonService } from 'src/services/common.service';
 import { PopupServiceService } from 'src/services/popup-service.service';
 
@@ -10,22 +11,36 @@ import { PopupServiceService } from 'src/services/popup-service.service';
   styleUrls: ['./update-product.component.css']
 })
 export class UpdateProductComponent implements OnInit {
-  productData: any;
+  @Input() title = ``;
+  @Input() heading = ``;
+  @Input() message = ``;
+  @Output () mainData=new EventEmitter<any>();
+ productData:any;
   update_form:FormGroup;
   productMessage:string;
-  constructor(private route : ActivatedRoute,private product:CommonService,private popupService:PopupServiceService){}
+  constructor(private route : ActivatedRoute,private product:CommonService,private popupService:PopupServiceService,public activeModal: NgbActiveModal){}
 
   ngOnInit(): void {
-    const url='http://localhost:3000/products'
-      let ProdId=this.route.snapshot.paramMap.get('id');
-      console.log(ProdId);
-      this.product.GetProductId(url,ProdId).subscribe((data) => {
-        console.warn(data);
-        this.productData=data;
-      })
+    this.FillData();
   }
 
+  FillData(){
+    const url='http://localhost:3000/products'
+    let ProdId=this.route.snapshot.paramMap.get('id');
+    console.log(ProdId);
+    this.product.GetProductId(url,ProdId).subscribe((data) => {
+      console.warn(data);
+      this.productData=data;
+      // this.mainData.emit(this.productData);
+    })
+  }
+  // EmitData(){
+  //   this.mainData.emit(this.productData);
+   
+  // }
+
   Submit(data :any){
+    this.mainData.emit(this.productData);
     if(this.productData){
       data.id=this.productData.id;
     }
@@ -35,6 +50,7 @@ export class UpdateProductComponent implements OnInit {
       if(result) {
        
         this.productMessage="Product Updated successfully";
+        // this.mainData.emit(this.productData);
        
        
       }

@@ -1,0 +1,25 @@
+#delete{
+    border: none;
+    background-color: #b93737;
+    color: #fff;
+    padding: 8px;
+    border-radius:5px;
+    margin: 5px;
+}
+#action{
+    display: flex;
+}
+#delete:hover{
+    background-color: #b04242;
+}
+#edit{
+    border: none;
+    background-color: #3b30e0;
+    color: #fff;
+    padding: 8px;
+    border-radius:5px;
+    margin: 5px;
+}
+#edit:hover{
+    background-color: #133ac5;
+}

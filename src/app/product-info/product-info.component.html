@@ -27,7 +27,7 @@
         <td>{{ product.category}}</td>
         <td>
           <div class="d-flex">
-            <button routerLink="/update/{{ product.id }}" type="button" class="btn btn-primary">Edit</button>
+            <button (click)="EditProduct(product.id)" type="button" class="btn btn-primary">Edit</button>
             <button (click)="DeleteProduct(product.id)" type="button" class="btn btn-danger mx-2">Delete</button>
           </div>
         </td>
@@ -37,5 +37,5 @@
 </div>
 
 <router-outlet></router-outlet>
-
+<!-- routerLink="/update/{{ product.id }} -->
 <!-- <h1>{{productMessage}}</h1> -->

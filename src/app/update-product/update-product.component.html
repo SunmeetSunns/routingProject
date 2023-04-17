@@ -1,5 +1,16 @@
 <!-- <app-common-modal  [title]="'Success !!!'" [message]="'Are you sure you want to perform this action?'" [buttons]="[{ label: 'Confirm', action: onConfirm }, { label: 'Cancel', action: onCancel }]"></app-common-modal> -->
-<h1>Update Product</h1>
+<div *ngIf="title=='Update Modal'" class="container">
+
+<div class="modal-title">
+  <h1>{{heading}}</h1>
+</div>
+<hr>
+<div class="modal-message">
+  <h6>{{message}}</h6>
+</div>
+
+
+
 <form #addProduct="ngForm" (ngSubmit)="Submit(addProduct.value)">
   
     <div>
@@ -24,7 +35,13 @@
       ngModel="{{productData.price}}">
     </div>
     
-    <button (click)="onOpenModal()" type="submit">Update</button>
-    
+    <button  (click)="Submit(addProduct.value)" type="submit">Update</button>
+    <div class="modal-buttons">
+      <!-- <button class="px-4" (ngSubmit)="Submit(addProduct.value)">Yes, I'm sure</button> -->
+      <button type="button"
+        class="inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 font-medium text-secondary shadow-sm"
+        (click)="activeModal.close('Close click')">Cancel</button>
+    </div>
   </form>
-  
+
+</div>

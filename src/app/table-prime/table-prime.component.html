@@ -1,24 +1,5 @@
-<p-table [value]="products" [tableStyle]="{ 'min-width': '50rem' }">
-    <ng-template pTemplate="header">
-        <tr>
-            <th>Code</th>
-            <th>Name</th>
-            <th>Category</th>
-            <th>Quantity</th>
-        </tr>
-    </ng-template>
-    <ng-template pTemplate="body" let-product>
-        <tr>
-            <td>{{ product.name }}</td>
-            <td>{{ product.category }}</td>
-            <td>{{ product.desc }}</td>
-            <td>{{ product.price }}</td>
-        </tr>
-    </ng-template>
-</p-table>
-
 <div class="container m-5">
-    <h1 class="h1 my-3">Dynamic P-Table</h1>
+    <h1 class="h1 my-3">Products Details</h1>
 
     <div class="">
 
@@ -28,6 +9,9 @@
                     <th *ngFor="let col of columns">
                         {{ col.header }}
                     </th>
+                    <th>
+                        Action
+                    </th>
                 </tr>
             </ng-template>
             <ng-template pTemplate="body" let-rowData let-columns="columns">
@@ -35,8 +19,18 @@
                     <td *ngFor="let col of columns">
                         {{ rowData[col.field] }}
                     </td>
+                    <td id="action">
+                        <button id="delete">
+                            Delete
+                        </button>  <button id="edit">
+                            Edit
+                         </button>
+                      
+                    </td>
                 </tr>
+               
             </ng-template>
         </p-table>
     </div>
 </div>
+
