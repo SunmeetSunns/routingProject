@@ -1,6 +1,7 @@
 import { Component ,OnInit} from '@angular/core';
 import{FormBuilder, FormControl,FormGroup,Validators}from'@angular/forms';
 import { CommonService } from 'src/services/common.service';
+import { PopupServiceService } from 'src/services/popup-service.service';
 
 
 
@@ -14,7 +15,7 @@ export class ProductComponent  implements OnInit {
   product:any={};
   my_Product:any;
 
-  constructor(private productInfo :CommonService){
+  constructor(private productInfo :CommonService,private popupService:PopupServiceService){
     // const url='http://localhost:3000/products';
     // productInfo.getproductInfo(url).subscribe((data) =>{
     //   console.warn('product',data);
@@ -38,6 +39,7 @@ export class ProductComponent  implements OnInit {
     const url='http://localhost:3000/products';
     this.productInfo.saveProductfo(url,my_Product).subscribe((result) => console.log(result));
     this.product_form.reset();
+    this.onOpenModal();
   }
   saveDetails(){
     // const url='http://localhost:3000/products';
@@ -54,6 +56,23 @@ export class ProductComponent  implements OnInit {
 
 
   }
+  
+  onOpenModal() {
+    this.popupService.openModal();
+  }
+
+  onCloseModal() {
+    this.popupService.closeModal();
+  }
+
+  onConfirm() {
+    console.log('Confirmed');
+  }
+
+  onCancel() {
+    console.log('Cancelled');
+  }
+ 
  
   // addProduct(product){
   //   let products=[];

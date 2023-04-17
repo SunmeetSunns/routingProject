@@ -1,4 +1,4 @@
-
+<app-common-modal  [title]="'Success !!!'" [message]="'Product details submitted successfully'" [buttons]="[{ label: 'OK', action: onConfirm }]"></app-common-modal>
 <form [formGroup]="product_form" (ngSubmit)="saveForm()">
   
     <div>
@@ -24,7 +24,7 @@
       <input type="number" id="product-price" name="price" required formControlName="price">
     </div>
     
-    <button type="submit">Submit</button>
+    <button  type="submit">Submit</button>
     
   </form>
   

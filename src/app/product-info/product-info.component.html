@@ -1,3 +1,4 @@
+<app-common-modal  [title]="'Confirm Action'" [message]="'Are you sure you want to perform this action?'" [buttons]="[{ label: 'Confirm', action: onConfirm ,DeleteProduct}, { label: 'Cancel', action: onCancel }]"></app-common-modal>
 <div class="popup">
   <h2>Hello User !!!</h2>
   <p>Your Details are successfully updated</p>
@@ -27,14 +28,15 @@
        
           <div class="d-flex">
             <button   routerLink="/update/{{ product.id }}" type="button" class="btn btn-primary">Edit</button>
-            <button (click)="DeleteProduct(product.id);showPopup();changeContent('Do you really want to delete this product?');" type="button" class="btn btn-danger mx-2">Delete</button>
+            <button (click)="DeleteProduct(product.id)" type="button" class="btn btn-danger mx-2">Delete</button>
           </div>
         </td>
   
     </tbody>
   </table>
   </div>
+ 
   <router-outlet></router-outlet>
-  <app-common-modal  [isVisible]="isPopupVisible" (onClose)="hidePopup()"></app-common-modal>
-  <h1>{{productMessage}}</h1>
+  
+  <!-- <h1>{{productMessage}}</h1> -->
 

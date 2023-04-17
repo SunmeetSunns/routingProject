@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonService } from 'src/services/common.service';
 import { ModalDismissReasons,NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { PopupServiceService } from 'src/services/popup-service.service';
 
 @Component({
   selector: 'app-product-info',
@@ -8,11 +9,12 @@ import { ModalDismissReasons,NgbModal } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./product-info.component.css']
 })
 export class ProductInfoComponent implements OnInit {
-  constructor(private productInfo :CommonService,private ModalService :NgbModal){
+  constructor(private productInfo :CommonService,private popupService :PopupServiceService){
+
    
   }
   
- closeResult:string ;
+
   ngOnInit(): void{
     this.UpdatedList();
   }
@@ -29,33 +31,44 @@ export class ProductInfoComponent implements OnInit {
     
   }
   DeleteProduct(id:number){
-    const url='http://localhost:3000/products';
    
+    this.onOpenModal();
+    if(this.onConfirm()==true){
+      const url='http://localhost:3000/products';
     this.productInfo.DeleteProductInfo(url,id).subscribe((result) =>{
       this.productMessage="Product deleted successfully";
-      
       this.UpdatedList();
 
     })
     // console.log('delete product',id);
 
-    setTimeout(() => {
-      this.productMessage=undefined;
-    }, 3000);
+  
+    }
+    else{
+
+    }
+
 
   }
-  isPopupVisible = false;
+  
 
-  showPopup() {
-    this.isPopupVisible = true;
+
+  onOpenModal() {
+    this.popupService.openModal();
   }
 
-  hidePopup() {
-    this.isPopupVisible = false;
+  onCloseModal() {
+    this.popupService.closeModal();
   }
-  changeContent(newContent: string) {
-    this. popUpContent = newContent;
-    // show the popup
+
+  onConfirm() {
+    console.log('Confirmed');
+    return true;
+    
+  }
+
+  onCancel() {
+    console.log('Cancelled');
   }
  
  

@@ -1,24 +1,17 @@
-<div class="modal" [ngClass]="{'d-block': isVisible}">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">The Item is Being Deleted </h5>
-        <button type="button" class="close" aria-label="Close" (click)="closePopup()">
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <div class="row">
-          <div class="col-12">
-          <button class="btn btn-danger">
-           Delete Item
+<div  *ngIf="showModal"class="container">
 
-          </button>
+  <div class="modal-title" *ngIf="showModal">
+    <h1 >{{title}}</h1>
 
-          </div>
-        </div>
-      </div>
-      <div class="modal-body">
-        <p>Are you sure you want to delete the item </p>
-      </div>
-    </div>
+  </div>
+  <hr *ngIf="showModal">
+  <div class="modal-message" *ngIf="showModal">
+    <h6 >{{message}}</h6>
+
+  </div>
+  <div class="modal-buttons" *ngIf="showModal">
+    <button *ngFor="let button of buttons" (click)="onButtonClicked(button)">
+      {{ button.label }}
+    </button>
   </div>
 </div>

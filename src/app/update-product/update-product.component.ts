@@ -2,6 +2,7 @@ import { Component , OnInit } from '@angular/core';
 import { FormGroup,FormControl } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { CommonService } from 'src/services/common.service';
+import { PopupServiceService } from 'src/services/popup-service.service';
 
 @Component({
   selector: 'app-update-product',
@@ -12,7 +13,7 @@ export class UpdateProductComponent implements OnInit {
   productData: any;
   update_form:FormGroup;
   productMessage:string;
-  constructor(private route : ActivatedRoute,private product:CommonService){}
+  constructor(private route : ActivatedRoute,private product:CommonService,private popupService:PopupServiceService){}
 
   ngOnInit(): void {
     const url='http://localhost:3000/products'
@@ -34,13 +35,33 @@ export class UpdateProductComponent implements OnInit {
       if(result) {
        
         this.productMessage="Product Updated successfully";
-        alert(this.productMessage);
+       
+       
       }
     });
     setTimeout(() => {
       this.productMessage=undefined;
     }, 3000);
 
+  }
+  
+  onOpenModal() {
+    this.popupService.openModal();
+    
+  }
+
+  onCloseModal() {
+    this.popupService.closeModal();
+  }
+
+  onConfirm() {
+    console.log('Confirmed');
+   
+    
+  }
+
+  onCancel() {
+    console.log('Cancelled');
   }
 
 }

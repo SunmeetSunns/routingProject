@@ -1,4 +1,30 @@
-.close{
-    background-color: red;
-    color: white;border: none;
+.container{
+    
+    background-color:rgb(17 24 39);
+    width:500px;
+    border-radius: 30px;
+    color:white;
+    box-shadow: 20px;
+    padding:30px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
+button{
+    background-color: #dc3545;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: 5px;
+    margin-top: 10px;
+    color: white;
+
+}
+button:hover{
+    background-color:#bb2d3b;
+    
+   
+}
+
+  

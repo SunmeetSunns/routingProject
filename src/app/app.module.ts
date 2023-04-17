@@ -22,6 +22,7 @@ import { ProductInfoComponent } from './product-info/product-info.component';
 import { UpdateProductComponent } from './update-product/update-product.component';
 import { TablePrimeComponent } from './table-prime/table-prime.component';
 import { TableModule } from 'primeng/table';
+import { PopupServiceService } from 'src/services/popup-service.service';
 
 @NgModule({
   declarations: [
